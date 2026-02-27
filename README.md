@@ -29,6 +29,8 @@ Three installation scopes are available:
 | **project** | `-s project` | `.claude/mcp.json` | Shared with team via git |
 | **user** | `-s user` | `~/.claude/mcp.json` | All your projects |
 
+**Quick setup (inline env vars):**
+
 ```bash
 claude mcp add nano-banana -s user \
   -e GEMINI_API_KEY=your-key \
@@ -36,6 +38,30 @@ claude mcp add nano-banana -s user \
 ```
 
 > Replace `-s user` with `-s local` or `-s project` as needed.
+
+**Persistent setup (.env file):**
+
+Add to your `.mcp.json`:
+
+```json
+{
+  "nano-banana": {
+    "command": "npx",
+    "args": ["-y", "github:pauloFroes/mcp-nano-banana"],
+    "env": {
+      "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+    }
+  }
+}
+```
+
+Then define the values in your `.env` file:
+
+```
+GEMINI_API_KEY=your-api-key
+```
+
+> See `.env.example` for all required variables.
 
 ### Codex
 
