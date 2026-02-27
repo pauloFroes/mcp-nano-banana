@@ -1,5 +1,5 @@
 declare const MODELS: {
-    readonly flash: "gemini-2.5-flash-preview-image-generation";
+    readonly flash: "gemini-2.5-flash-image";
     readonly pro: "gemini-3-pro-image-preview";
 };
 export type ModelChoice = keyof typeof MODELS;

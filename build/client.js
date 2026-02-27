@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { join, extname } from "node:path";
 // --- Model mapping ---
 const MODELS = {
-    flash: "gemini-2.5-flash-preview-image-generation",
+    flash: "gemini-2.5-flash-image",
     pro: "gemini-3-pro-image-preview",
 };
 export function resolveModel(choice) {

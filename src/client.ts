@@ -6,7 +6,7 @@ import { join, extname } from "node:path";
 // --- Model mapping ---
 
 const MODELS = {
-  flash: "gemini-2.5-flash-preview-image-generation",
+  flash: "gemini-2.5-flash-image",
   pro: "gemini-3-pro-image-preview",
 } as const;
 
