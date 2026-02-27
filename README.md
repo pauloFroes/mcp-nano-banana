@@ -21,12 +21,21 @@ Generate, edit, compose, and describe images using Gemini 2.5 Flash and Gemini 3
 
 ### Claude Code
 
+Three installation scopes are available:
+
+| Scope | Flag | Config file | Use case |
+|-------|------|-------------|----------|
+| **local** | `-s local` | `.mcp.json` | This project only (default) |
+| **project** | `-s project` | `.claude/mcp.json` | Shared with team via git |
+| **user** | `-s user` | `~/.claude/mcp.json` | All your projects |
+
 ```bash
-claude mcp add nano-banana \
-  --transport stdio \
+claude mcp add nano-banana -s user \
   -e GEMINI_API_KEY=your-key \
   -- npx -y github:pauloFroes/mcp-nano-banana
 ```
+
+> Replace `-s user` with `-s local` or `-s project` as needed.
 
 ### Codex
 
